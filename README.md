@@ -5,3 +5,5 @@ This repository contains our project, implemented under supervision of Prof. Dr.
 ## Collaborators
 
 - Seyedmasih Tabaei
+- Adrian Häfner
+- Maximilian Heß
