@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
 /// <summary>
 /// Base: Time of Day
@@ -12,8 +12,22 @@ using System.Collections;
 /// <remarks>
 /// This is the main script for our Time of Day system. This handles the time and the updating of the sun. 
 /// </remarks>
-public class ToD_Base : MonoBehaviour 
-{
+public class ToD_Base:MonoBehaviour {
+    public void SetTime(int hour,int minute) {
+        // Begrenzungen sicherstellen
+        hour = Mathf.Clamp(hour,0,23);
+        minute = Mathf.Clamp(minute,0,59);
+
+        // Berechnung von _fCurrentTimeOfDay basierend auf Stunde und Minute
+        _fCurrentTimeOfDay = (hour / 24.0f) + (minute / 1440.0f);
+
+        // Aktualisiere digitale Zeitwerte
+        _fCurrentHour = hour;
+        _fCurrentMinute = minute;
+    }
+
+
+
     /********** ----- VARIABLES ----- **********/
 
     /// <summary>
@@ -148,9 +162,8 @@ public class ToD_Base : MonoBehaviour
     /// <summary>
     /// We use this to control Sunrise, Day, Sunset and Night
     /// </summary>
-    public enum Timeset
-    {
-        SUNRISE, 
+    public enum Timeset {
+        SUNRISE,
         DAY,
         SUNSET,
         NIGHT
@@ -166,58 +179,49 @@ public class ToD_Base : MonoBehaviour
     public float Get_fCurrentMinute { get { return _fCurrentMinute; } }
     public int Get_iAmountOfDaysPlayed { get { return _iAmountOfDaysPlayed; } }
 
-    public bool GetSet_bUseMoon
-    {
+    public bool GetSet_bUseMoon {
         get { return _bUseMoon; }
         set { _bUseMoon = value; }
     }
 
-    public bool GetSet_bUseWeather
-    {
+    public bool GetSet_bUseWeather {
         get { return _bUseWeather; }
         set { _bUseWeather = value; }
     }
 
-    public float GetSet_fSecondInAFullDay
-    {
+    public float GetSet_fSecondInAFullDay {
         get { return _fSecondInAFullDay; }
         set { _fSecondInAFullDay = value; }
     }
 
-    public float GetSet_fTimeMultiplier
-    {
+    public float GetSet_fTimeMultiplier {
         get { return _fTimeMultiplier; }
         set { _fTimeMultiplier = value; }
     }
 
-    public int GetSet_iStartHour
-    {
+    public int GetSet_iStartHour {
         get { return _iStartHour; }
         set { _iStartHour = value; }
     }
 
-    public int GetSet_iSunriseStart
-    {
+    public int GetSet_iSunriseStart {
         get { return _iSunriseStart; }
         set { _iSunriseStart = value; }
     }
 
-    public int GetSet_iDayStart
-    {
+    public int GetSet_iDayStart {
         get { return _iDayStart; }
         set { _iDayStart = value; }
     }
 
 
-    public int GetSet_iSunsetStart
-    {
+    public int GetSet_iSunsetStart {
         get { return _iSunsetStart; }
         set { _iSunsetStart = value; }
     }
 
 
-    public int GetSet_iNightStart
-    {
+    public int GetSet_iNightStart {
         get { return _iNightStart; }
         set { _iNightStart = value; }
     }
@@ -225,15 +229,14 @@ public class ToD_Base : MonoBehaviour
     /// <summary>
     /// Unity function - See Unity documentation
     /// </summary>
-    void Start()
-    {
-        _fStartingHour = ONEHOURLENGTH * (float)_iStartHour;
+    void Start() {
+        _fStartingHour = ONEHOURLENGTH * (float) _iStartHour;
         _fCurrentTimeOfDay = _fStartingHour;
 
-        _fStartingSunrise = ONEHOURLENGTH * (float)_iSunriseStart;
-        _fStartingDay = ONEHOURLENGTH * (float)_iDayStart;
-        _fStartingSunset = ONEHOURLENGTH * (float)_iSunsetStart;
-        _fStartingNight = ONEHOURLENGTH * (float)_iNightStart;
+        _fStartingSunrise = ONEHOURLENGTH * (float) _iSunriseStart;
+        _fStartingDay = ONEHOURLENGTH * (float) _iDayStart;
+        _fStartingSunset = ONEHOURLENGTH * (float) _iSunsetStart;
+        _fStartingNight = ONEHOURLENGTH * (float) _iNightStart;
 
         _iAmountOfDaysPlayed = 0;
         _fCurrentHour = 0.0f;
@@ -243,8 +246,7 @@ public class ToD_Base : MonoBehaviour
     /// <summary>
     /// Unity function - See Unity documentation
     /// </summary>
-    void Update()
-    {
+    void Update() {
         UpdateSunAndMoon();
         UpdateTimeset();
 
@@ -256,8 +258,7 @@ public class ToD_Base : MonoBehaviour
         _fCurrentMinute = 60 * (_fCurrentHour - Mathf.Floor(_fCurrentHour));
 
         // resets our time of day to 0 + adds a day to our amount of days played
-        if (_fCurrentTimeOfDay >= 1.0f)
-        {
+        if (_fCurrentTimeOfDay >= 1.0f) {
             _fCurrentTimeOfDay = 0.0f;
             _iAmountOfDaysPlayed += 1;
 
@@ -269,19 +270,17 @@ public class ToD_Base : MonoBehaviour
     /// <summary>
     /// This is used inside Unitys Update() to update our SUN and MOON (if you have the MOON turned on). 
     /// </summary>
-    void UpdateSunAndMoon()
-    {
+    void UpdateSunAndMoon() {
         // This rotates the sun 360 degree in X-axis according to our current time of day.
-        lSun.transform.localRotation = Quaternion.Euler((_fCurrentTimeOfDay * 360) - 90, 170, 0);
+        lSun.transform.localRotation = Quaternion.Euler((_fCurrentTimeOfDay * 360) - 90,170,0);
 
         if (_bUseMoon == true)
-            lMoon.transform.localRotation = Quaternion.Euler((_fCurrentTimeOfDay * 360) - 270, 170, 0);
+            lMoon.transform.localRotation = Quaternion.Euler((_fCurrentTimeOfDay * 360) - 270,170,0);
     }
 
 
 
-    void UpdateTimeset()
-    {
+    void UpdateTimeset() {
         if (_fCurrentTimeOfDay >= _fStartingSunrise && _fCurrentTimeOfDay <= _fStartingDay && enCurrTimeset != Timeset.SUNRISE)
             SetCurrentTimeset(Timeset.SUNRISE);
         else if (_fCurrentTimeOfDay >= _fStartingDay && _fCurrentTimeOfDay <= _fStartingSunset && enCurrTimeset != Timeset.DAY)
@@ -292,8 +291,7 @@ public class ToD_Base : MonoBehaviour
             SetCurrentTimeset(Timeset.NIGHT);
     }
 
-    void SetCurrentTimeset(Timeset currentTime)
-    {
+    void SetCurrentTimeset(Timeset currentTime) {
         enCurrTimeset = currentTime;
     }
 

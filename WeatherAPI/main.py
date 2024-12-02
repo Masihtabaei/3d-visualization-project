@@ -38,7 +38,7 @@ def main():
         )
 
     # Speichere alle Wetterdaten in einer JSON-Datei
-    json_filename = "weather_data_coburg.json"
+    json_filename = "../weather_data_coburg.json"
     with open(json_filename, "w") as json_file:
         json.dump(all_weather_data, json_file, indent=4)  # Besser lesbare JSON-Datei
 
