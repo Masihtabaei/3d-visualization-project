@@ -1,9 +1,10 @@
 [project]
 name = "data-proxy-service"
 version = "0.1.0"
-description = "Add your description here"
+description = "Proxy service for data handling"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "fastapi[standard]>=0.115.6",
+    "tomli>=2.2.1",
 ]
