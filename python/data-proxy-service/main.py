@@ -26,7 +26,7 @@ def retrieve_current_weather_data(latitude, longitude):
     params = {
 	    "latitude": latitude,
 	    "longitude": longitude,
-	    "current": "temperature_2m"
+	    "current": ["temperature_2m", "apparent_temperature", "rain", "snowfall", "is_day"]
     }
     responses = openmeteo_handle.weather_api(url, params=params)
     response = responses[0]
@@ -34,7 +34,11 @@ def retrieve_current_weather_data(latitude, longitude):
     retrieval_result = {
         "latitude": response.Latitude(),
         "longitude": response.Longitude(),
-        "temperature": response.Current().Variables(0).Value()
+        "temperature": response.Current().Variables(0).Value(),
+        "apparent_temperature": response.Current().Variables(1).Value(),
+        "rain": response.Current().Variables(2).Value(),
+        "snowfall": response.Current().Variables(3).Value(),
+        "is_day": response.Current().Variables(4).Value()
     }
     print(retrieval_result)
     return retrieval_result
