@@ -108,6 +108,7 @@ dependencies = [
     { name = "requests-cache" },
     { name = "retry-requests" },
     { name = "tomli" },
+    { name = "websockets" },
 ]
 
 [package.metadata]
@@ -117,6 +118,7 @@ requires-dist = [
     { name = "requests-cache", specifier = ">=1.2.1" },
     { name = "retry-requests", specifier = ">=2.0.0" },
     { name = "tomli", specifier = ">=2.2.1" },
+    { name = "websockets", specifier = ">=14.1" },
 ]
 
 [[package]]

@@ -10,4 +10,5 @@ dependencies = [
     "requests-cache>=1.2.1",
     "retry-requests>=2.0.0",
     "tomli>=2.2.1",
+    "websockets>=14.1",
 ]
