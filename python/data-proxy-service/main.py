@@ -1,6 +1,7 @@
 import tomli
 
-from fastapi import FastAPI
+from fastapi import FastAPI, WebSocket
+import asyncio
 
 import openmeteo_requests
 import requests_cache
@@ -59,3 +60,16 @@ def get_current_weather_marktplatz_coburg():
 @app.get("/current-weather-hochschule-coburg")
 def get_current_weather_marktplatz_coburg():
     return retrieve_current_weather_data(50.26508775135977, 10.951169729341302)
+
+@app.websocket("/ws/weather")
+async def weather_websocket_endpoint(websocket: WebSocket):
+    await websocket.accept()
+    try:
+        while True:
+            current_weather_data = retrieve_current_weather_data(50.26508775135977, 10.951169729341302)
+            await websocket.send_json(current_weather_data)
+            await asyncio.sleep(15)
+    except Exception as exception:
+        print(f"Excpetion: {exception}")
+    finally:
+        await websocket.close()
