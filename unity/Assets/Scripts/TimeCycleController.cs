@@ -20,10 +20,21 @@ public class TimeCycle : MonoBehaviour
     [SerializeField]
     private int yearCounter = 0;
 
+    [SerializeField]
+    private Transform sunTransform;
+
+    private float sunAngle = 0.0f;
+
 
     public void Update()
     {
-        deltaTimeAccumulator += Time.deltaTime;
+        float rotationSpeed = 10f; // Degrees per second
+        sunAngle += rotationSpeed * Time.deltaTime;
+        if (sunAngle > 360f)
+        {
+            sunAngle -= 360f;
+        }
+        sunTransform.localRotation = Quaternion.Euler(sunAngle, 0.0f, 0.0f); deltaTimeAccumulator += Time.deltaTime;
         if (deltaTimeAccumulator - 1 < 0)
             return;
 
@@ -35,5 +46,12 @@ public class TimeCycle : MonoBehaviour
         mostSignificantBit = ((dayCounter - 1 - YEAR_LENGTH_IN_DAYS) >> 31) & 1;
         dayCounter *= mostSignificantBit;
         yearCounter += (1 - mostSignificantBit);
+
+        sunAngle++;
+        if (sunAngle > 360)
+        {
+            sunAngle = 0;
+        }
+
     }
 }
