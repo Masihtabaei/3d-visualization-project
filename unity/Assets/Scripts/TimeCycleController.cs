@@ -34,7 +34,8 @@ public class TimeCycle : MonoBehaviour
         {
             sunAngle -= 360f;
         }
-        sunTransform.localRotation = Quaternion.Euler(sunAngle, 0.0f, 0.0f); deltaTimeAccumulator += Time.deltaTime;
+        sunTransform.localRotation = Quaternion.Euler(sunAngle, 0.0f, 0.0f); 
+        deltaTimeAccumulator += Time.deltaTime;
         if (deltaTimeAccumulator - 1 < 0)
             return;
 
