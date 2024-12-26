@@ -3,8 +3,8 @@ using UnityEditor;
 
 public class FBXFixer : MonoBehaviour
 {
-    public GameObject fbxModel; // Drag your FBX model here
-    public string textureFolderPath = "Assets/Textures"; // Path to your texture folder
+    public GameObject fbxModel;
+    public string textureFolderPath = "Assets/Textures";
 
     public void Start()
     {
@@ -13,7 +13,6 @@ public class FBXFixer : MonoBehaviour
 
     public void ApplyAllTextures()
     {
-        // Load all textures in the specified folder
         string[] texturePaths = AssetDatabase.FindAssets("t:Texture2D", new[] { textureFolderPath });
 
         if (texturePaths.Length == 0)
@@ -22,7 +21,6 @@ public class FBXFixer : MonoBehaviour
             return;
         }
 
-        // Map textures by name
         var textures = new System.Collections.Generic.Dictionary<string, Texture2D>();
         foreach (string guid in texturePaths)
         {
@@ -34,7 +32,6 @@ public class FBXFixer : MonoBehaviour
             }
         }
 
-        // Iterate through all the renderers in the FBX model
         Renderer[] renderers = fbxModel.GetComponentsInChildren<Renderer>();
 
         foreach (Renderer renderer in renderers)
