@@ -1,0 +1,13 @@
+Font: Open Sans  Style: Regular
+Point Size: 50   Padding: -1073741824   SP/PD Ratio: -2147484000.0%
+
+Characters included: 98/99
+Missing characters: 1
+Excluded characters: 0
+
+Characters missing from font file:
+----------------------------------------
+ID: 9633	Hex: 25A1	Char [□]
+
+Characters excluded from packing:
+----------------------------------------
