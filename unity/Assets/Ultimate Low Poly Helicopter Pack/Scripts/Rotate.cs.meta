@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2d565bc957486e84ea14e36b693eb343
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 200465
+  packageName: Ultimate Low Poly Helicopter Pack
+  packageVersion: 1.0
+  assetPath: Assets/Ultimate Low Poly Helicopter Pack/Scripts/Rotate.cs
+  uploadId: 455658

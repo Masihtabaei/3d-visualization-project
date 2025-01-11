@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 20921d1f9c8022a429627e615fa293ea
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 200465
+  packageName: Ultimate Low Poly Helicopter Pack
+  packageVersion: 1.0
+  assetPath: Assets/Ultimate Low Poly Helicopter Pack/Scripts/HelicopterModelController.cs
+  uploadId: 455658
