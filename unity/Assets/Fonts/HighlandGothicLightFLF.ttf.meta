@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 526f383281744424c9b24f7d14bebebd
+guid: 9f921bc65fd1ce8448d7bef8d3c9e893
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Open Sans
+  - HighlandGothicLightFLF
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
