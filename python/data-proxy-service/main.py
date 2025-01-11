@@ -44,29 +44,59 @@ def retrieve_current_weather_data(latitude, longitude):
     print(retrieval_result)
     return retrieval_result
 
-
 @app.get("/")
 def get_root():
     return retrieve_service_information()
 
-@app.get("/current-weather-veste-coburg")
+@app.get("/ping")
+def get_ping():
+    return "I am a banana!"
+
+@app.get("/current-weather-coburg-university")
+def get_current_weather_marktplatz_coburg():
+    return retrieve_current_weather_data(50.264805843873596, 10.95194081317186)
+
+@app.get("/current-weather-marketplace-coburg")
 def get_current_weather_veste_coburg():
-    return retrieve_current_weather_data(50.26411351251029, 10.983249396469494)
+    return retrieve_current_weather_data(50.258344418260336, 10.964638398120213)
 
-@app.get("/current-weather-marktplatz-coburg")
+@app.get("/current-weather-veste-coburg")
 def get_current_weather_marktplatz_coburg():
-    return retrieve_current_weather_data(50.25832266422471, 10.964554499921011)
+    return retrieve_current_weather_data(50.26393447177281, 10.98372942394643)
 
-@app.get("/current-weather-hochschule-coburg")
-def get_current_weather_marktplatz_coburg():
-    return retrieve_current_weather_data(50.26508775135977, 10.951169729341302)
-
-@app.websocket("/ws/weather")
+@app.websocket("/ws/current-weather-coburg-university")
 async def weather_websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     try:
         while True:
-            current_weather_data = retrieve_current_weather_data(50.26508775135977, 10.951169729341302)
+            current_weather_data = retrieve_current_weather_data(50.264805843873596, 10.95194081317186)
+            await websocket.send_json(current_weather_data)
+            await asyncio.sleep(15)
+    except Exception as exception:
+        print(f"Excpetion: {exception}")
+    finally:
+        await websocket.close()
+
+
+@app.websocket("/ws/current-weather-marketplace-coburg")
+async def weather_websocket_endpoint(websocket: WebSocket):
+    await websocket.accept()
+    try:
+        while True:
+            current_weather_data = retrieve_current_weather_data(50.258344418260336, 10.964638398120213)
+            await websocket.send_json(current_weather_data)
+            await asyncio.sleep(15)
+    except Exception as exception:
+        print(f"Excpetion: {exception}")
+    finally:
+        await websocket.close()
+
+@app.websocket("/ws/current-weather-veste-coburg")
+async def weather_websocket_endpoint(websocket: WebSocket):
+    await websocket.accept()
+    try:
+        while True:
+            current_weather_data = retrieve_current_weather_data(50.26393447177281, 10.98372942394643)
             await websocket.send_json(current_weather_data)
             await asyncio.sleep(15)
     except Exception as exception:
