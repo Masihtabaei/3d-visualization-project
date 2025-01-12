@@ -477,7 +477,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    directLightIntensityModifier: 1.2
+    directLightIntensityModifier: 0.5
     setAmbientLighting: 1
     ambientMode: 0
     ambientSkyColorGradient:
@@ -594,7 +594,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    ambientIntensityModifier: 1
+    ambientIntensityModifier: 0.6
     ambientUpdateEveryFrame: 0
     ambientUpdateIntervall: 0.1
     shadowIntensity: 1

@@ -28,7 +28,7 @@ MonoBehaviour:
       prefab: {fileID: 6936246916098640434, guid: bf3881f9fe64de14597de578d2acee5d, type: 3}
       localPositionOffset: {x: 0, y: 25, z: 0}
       localRotationOffset: {x: -90, y: 0, z: 0}
-      emissionRate: 0
+      emissionRate: 1
       maxEmission: 2000
     - myVFXGraph: {fileID: 0}
       prefabVFXGraph: {fileID: 0}

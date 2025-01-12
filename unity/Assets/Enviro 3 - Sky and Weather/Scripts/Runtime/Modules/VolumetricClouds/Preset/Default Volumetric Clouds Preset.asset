@@ -20,31 +20,31 @@ MonoBehaviour:
     cloudsWindDirectionYModifier: 1
     windSpeedModifier: 0.015
     windUpwards: 0.02
-    coverage: -1
+    coverage: 0.48
     worleyFreq2: 2
     worleyFreq1: 4
-    dilateCoverage: 0.929
-    dilateType: 1
-    cloudsTypeModifier: 1
+    dilateCoverage: 1
+    dilateType: 0.233
+    cloudsTypeModifier: 0.804
     locationOffset: {x: 0, y: 0}
     bottomCloudsHeight: 2000
     topCloudsHeight: 8000
-    density: 0.55
-    densitySmoothness: 1
-    scatteringIntensity: 1.05
+    density: 0.2
+    densitySmoothness: 1.65
+    scatteringIntensity: 0.12
     silverLiningSpread: 0.8
-    powderIntensity: 0.848
-    curlIntensity: 0.1
+    powderIntensity: 0.219
+    curlIntensity: 0.2
     lightStepModifier: 0.15
-    lightAbsorbtion: 1.01
-    multiScatteringA: 0.575
-    multiScatteringB: 0.227
-    multiScatteringC: 0
+    lightAbsorbtion: 1.286
+    multiScatteringA: 0.44
+    multiScatteringB: 0.177
+    multiScatteringC: 0.44
     baseNoiseUV: 6
     detailNoiseUV: 28
-    baseErosionIntensity: 0.184
-    detailErosionIntensity: 0.3
-    anvilBias: 0.398
+    baseErosionIntensity: 0
+    detailErosionIntensity: 0.8
+    anvilBias: 0.651
   settingsLayer2:
     cloudsWindDirectionXModifier: -1
     cloudsWindDirectionYModifier: -1
@@ -181,7 +181,7 @@ MonoBehaviour:
     cloudsWorldScale: 5000000
     maxRenderDistance: 70000
     atmosphereColorSaturateDistance: 35000
-    ambientLighIntensity: 1
+    ambientLighIntensity: 0.6
     cloudShadows: 0
     cloudShadowsIntensity: 2
     cloudsTravelSpeed: 0

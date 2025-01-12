@@ -32,7 +32,6 @@ public class StartConfigurationManager : MonoBehaviour
         while (!sceneLoadingOperation.isDone) 
         {
             float loadingProgress = Mathf.Clamp01(sceneLoadingOperation.progress / 0.9f);
-            Debug.Log(loadingProgress);
             progressBar.value = loadingProgress;
             yield return null;
         }

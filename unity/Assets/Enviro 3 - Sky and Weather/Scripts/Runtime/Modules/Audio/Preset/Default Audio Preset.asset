@@ -24,7 +24,7 @@ MonoBehaviour:
       playBackType: 1
       myAudioSource: {fileID: 0}
       loop: 1
-      volume: 1
+      volume: 0
       volumeCurve:
         serializedVersion: 2
         m_Curve:
@@ -75,7 +75,7 @@ MonoBehaviour:
       playBackType: 1
       myAudioSource: {fileID: 0}
       loop: 1
-      volume: 1
+      volume: 0
       volumeCurve:
         serializedVersion: 2
         m_Curve:
@@ -151,7 +151,7 @@ MonoBehaviour:
       playBackType: 0
       myAudioSource: {fileID: 0}
       loop: 1
-      volume: 0
+      volume: 1
       volumeCurve:
         serializedVersion: 2
         m_Curve: []

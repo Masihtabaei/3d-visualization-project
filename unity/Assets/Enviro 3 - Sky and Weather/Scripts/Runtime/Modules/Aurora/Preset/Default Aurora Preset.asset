@@ -17,7 +17,7 @@ MonoBehaviour:
   active: 1
   Settings:
     useAurora: 1
-    auroraIntensityModifier: 0
+    auroraIntensityModifier: 1
     auroraIntensity:
       serializedVersion: 2
       m_Curve:

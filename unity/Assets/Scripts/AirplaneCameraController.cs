@@ -9,6 +9,7 @@ public class AirplaneCameraController : MonoBehaviour
     [SerializeField]
     private float speed = 1000;
 
+
     private int pointOfViewIndex = 0;
     private Vector3 target;
 

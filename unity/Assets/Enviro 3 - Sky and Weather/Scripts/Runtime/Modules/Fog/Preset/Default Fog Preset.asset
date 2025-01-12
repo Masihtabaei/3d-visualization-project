@@ -19,7 +19,7 @@ MonoBehaviour:
     volumetrics: 1
     steps: 32
     quality: 1
-    scattering: 0.045
+    scattering: 0.39
     scatteringMultiplier:
       serializedVersion: 2
       m_Curve:
@@ -62,8 +62,8 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    extinction: 0.089
-    anistropy: 0.6
+    extinction: 0.232
+    anistropy: 0.105
     maxRange: 1000
     maxRangePointSpot: 100
     noiseIntensity: 0
@@ -75,15 +75,15 @@ MonoBehaviour:
     fogQualityMode: 0
     floatingPointOriginMod: {x: 0, y: 0, z: 0}
     globalFogHeight: 0
-    fogDensity: 0.019
-    fogHeightFalloff: 0.0128
+    fogDensity: 0.02
+    fogHeightFalloff: 0.0016
     fogHeight: 0
-    fogDensity2: 0.012
-    fogHeightFalloff2: 0.0015
-    fogHeight2: 0
+    fogDensity2: 0.312
+    fogHeightFalloff2: 0.0417
+    fogHeight2: -40
     fogMaxOpacity: 1
     startDistance: 0.01
-    fogColorBlend: 1
+    fogColorBlend: 0.5
     fogColorMod: {r: 1, g: 1, b: 1, a: 1}
     ambientColorGradient:
       serializedVersion: 2

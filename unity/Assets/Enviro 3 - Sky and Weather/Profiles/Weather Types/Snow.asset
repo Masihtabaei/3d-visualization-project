@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cbac6e678443724c9bd2baf5d564c1d, type: 3}
   m_Name: Snow
   m_EditorClassIdentifier: 
-  showEditor: 1
-  showEffectControls: 0
-  showCloudControls: 1
+  showEditor: 0
+  showEffectControls: 1
+  showCloudControls: 0
   showFlatCloudControls: 0
   showFogControls: 0
   showSkyControls: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
   showEnvironmentControls: 0
   showAudioControls: 1
   showAmbientAudioControls: 0
-  showWeatherAudioControls: 0
+  showWeatherAudioControls: 1
   showLightningControls: 0
   cloudsOverride:
     ambientLightIntensity: 1
@@ -98,7 +98,7 @@ MonoBehaviour:
     auroraIntensity: 1
   effectsOverride:
     effectsOverride:
-    - showEditor: 1
+    - showEditor: 0
       name: Snow
       emission: 1
   audioOverride:
@@ -110,7 +110,14 @@ MonoBehaviour:
       summer: 0
       autumn: 0
       winter: 0
-    weatherOverride: []
+    weatherOverride:
+    - showEditor: 0
+      name: 
+      volume: 0
+      spring: 0
+      summer: 0
+      autumn: 0
+      winter: 0
   lightningOverride:
     lightningStorm: 0
     randomLightningDelay: 1

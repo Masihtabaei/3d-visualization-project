@@ -17,8 +17,8 @@ MonoBehaviour:
   active: 1
   Settings:
     prefab: {fileID: 8233971941884837668, guid: 3686e34c2aa90c44e8eab718f3bf99b6, type: 3}
-    lightningStorm: 0
-    randomLightingDelay: 9.6
+    lightningStorm: 1
+    randomLightingDelay: 1
     randomSpawnRange: 5000
     randomTargetRange: 5000
   preset: {fileID: 0}
