@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 21c22d07d5089a54bae0d9c4c5a70573
+timeCreated: 1433780145
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 40107
+  packageName: Base Helicopter Controller
+  packageVersion: 1.1
+  assetPath: Assets/Helicopter/FreeRide.unity
+  uploadId: 72580

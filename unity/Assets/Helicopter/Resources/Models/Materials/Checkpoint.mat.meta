@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0171467e0e54aaa479b7817091b06588
+timeCreated: 1436871783
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 40107
+  packageName: Base Helicopter Controller
+  packageVersion: 1.1
+  assetPath: Assets/Helicopter/Resources/Models/Materials/Checkpoint.mat
+  uploadId: 72580

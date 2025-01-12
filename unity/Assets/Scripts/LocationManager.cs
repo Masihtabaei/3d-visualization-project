@@ -56,10 +56,13 @@ public class LocationManager : MonoBehaviour
 
         // waiting for messages
         await websocket.Connect();
+        StartCoroutine(MyCoroutine());
+
     }
 
     void Update()
     {
+       
         #if !UNITY_WEBGL || UNITY_EDITOR
             websocket.DispatchMessageQueue();
         #endif
@@ -69,6 +72,14 @@ public class LocationManager : MonoBehaviour
     private async void OnApplicationQuit()
     {
         await websocket.Close();
+    }
+
+    IEnumerator MyCoroutine()
+    {
+        yield return new WaitForSeconds(20f);
+        Enviro.EnviroManager.instance.Weather.ChangeWeather("Rain");
+        Debug.Log("Weather Changed");
+        //code here will execute after 5 seconds
     }
 
 }

@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cbac6e678443724c9bd2baf5d564c1d, type: 3}
+  m_Name: Cloudy 1
+  m_EditorClassIdentifier: 
+  showEditor: 0
+  showEffectControls: 0
+  showCloudControls: 0
+  showFlatCloudControls: 0
+  showFogControls: 1
+  showSkyControls: 1
+  showLightingControls: 0
+  showAuroraControls: 0
+  showEnvironmentControls: 0
+  showAudioControls: 0
+  showAmbientAudioControls: 0
+  showWeatherAudioControls: 0
+  showLightningControls: 0
+  cloudsOverride:
+    ambientLightIntensity: 1
+    showLayer1: 0
+    coverageLayer1: -0.141
+    dilateCoverageLayer1: 0
+    dilateTypeLayer1: 0
+    typeModifierLayer1: 0.463
+    anvilBiasLayer1: 0.247
+    scatteringIntensityLayer1: 0.814
+    multiScatteringALayer1: 0.42
+    multiScatteringBLayer1: 0.179
+    multiScatteringCLayer1: 0.748
+    powderIntensityLayer1: 0.972
+    silverLiningSpreadLayer1: 0.8
+    ligthAbsorbtionLayer1: 0.82
+    densityLayer1: 0.394
+    densitySmoothnessLayer1: 1.402
+    baseErosionIntensityLayer1: 0.5
+    detailErosionIntensityLayer1: 0.5
+    curlIntensityLayer1: 0.25
+    showLayer2: 1
+    coverageLayer2: 0.093
+    dilateCoverageLayer2: 0.302
+    dilateTypeLayer2: 1
+    typeModifierLayer2: 0.644
+    anvilBiasLayer2: 0.373
+    scatteringIntensityLayer2: 1.235
+    multiScatteringALayer2: 0.627
+    multiScatteringBLayer2: 0.193
+    multiScatteringCLayer2: 0.047
+    powderIntensityLayer2: 0.907
+    silverLiningSpreadLayer2: 0.8
+    ligthAbsorbtionLayer2: 0.423
+    densityLayer2: 0.142
+    densitySmoothnessLayer2: 1.677
+    baseErosionIntensityLayer2: 0.364
+    detailErosionIntensityLayer2: 0.669
+    curlIntensityLayer2: 0.191
+  flatCloudsOverride:
+    cirrusCloudsAlpha: 1
+    cirrusCloudsCoverage: 0.431
+    cirrusCloudsColorPower: 1.25
+    flatCloudsCoverage: 1.287
+    flatCloudsDensity: 1
+    flatCloudsLightIntensity: 1.014
+    flatCloudsAmbientIntensity: 1.05
+    flatCloudsAbsorbtion: 1.814
+  lightingOverride:
+    directLightIntensityModifier: 1
+    ambientIntensityModifier: 1
+    shadowIntensity: 1
+  skyOverride:
+    intensity: 1
+    skyColorTint: {r: 1, g: 1, b: 1, a: 1}
+  fogOverride:
+    fogDensity: 0.041
+    fogHeightFalloff: 0.0121
+    fogHeight: 0
+    fogDensity2: 0.044
+    fogHeightFalloff2: 0.0056
+    fogHeight2: 0
+    fogColorBlend: 0.5
+    fogColorMod: {r: 1, g: 1, b: 1, a: 1}
+    scattering: 0.28
+    extinction: 0.02
+    anistropy: 0.19
+    unityFogDensity: 0.002
+    unityFogStartDistance: 0
+    unityFogEndDistance: 1000
+  auroraOverride:
+    auroraIntensity: 1
+  effectsOverride:
+    effectsOverride: []
+  audioOverride:
+    ambientOverride:
+    - showEditor: 0
+      name: Day
+      volume: 1
+      spring: 0
+      summer: 0
+      autumn: 0
+      winter: 0
+    - showEditor: 0
+      name: Night
+      volume: 1
+      spring: 0
+      summer: 0
+      autumn: 0
+      winter: 0
+    weatherOverride: []
+  lightningOverride:
+    lightningStorm: 0
+    randomLightningDelay: 10
+  environmentOverride:
+    temperatureWeatherMod: 0
+    wetnessTarget: 0
+    snowTarget: 0
+    windDirectionX: 1
+    windDirectionY: -1
+    windSpeed: 0.5
+    windTurbulence: 0.2

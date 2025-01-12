@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: ff85a5e654edb91409b2b12a3b2fa043
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 40107
+  packageName: Base Helicopter Controller
+  packageVersion: 1.1
+  assetPath: Assets/Helicopter/Scripts/HeliRotorController.cs
+  uploadId: 72580

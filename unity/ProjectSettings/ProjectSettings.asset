@@ -745,7 +745,20 @@ PlayerSettings:
   webGLWebAssemblyBigInt: 0
   webGLCloseOnQuit: 0
   webWasm2023: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Android: ENVIRO_3;ENVIRO_VFXGRAPH
+    EmbeddedLinux: ENVIRO_3;ENVIRO_VFXGRAPH
+    GameCoreXboxOne: ENVIRO_3;ENVIRO_VFXGRAPH
+    Nintendo Switch: ENVIRO_3;ENVIRO_VFXGRAPH
+    PS4: ENVIRO_3;ENVIRO_VFXGRAPH
+    PS5: ENVIRO_3;ENVIRO_VFXGRAPH
+    QNX: ENVIRO_3;ENVIRO_VFXGRAPH
+    ReservedCFE: ENVIRO_3;ENVIRO_VFXGRAPH
+    Standalone: ENVIRO_3;ENVIRO_VFXGRAPH
+    VisionOS: ENVIRO_3;ENVIRO_VFXGRAPH
+    WebGL: ENVIRO_3;ENVIRO_VFXGRAPH
+    XboxOne: ENVIRO_3;ENVIRO_VFXGRAPH
+    tvOS: ENVIRO_3;ENVIRO_VFXGRAPH
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 76c9736ef2a34c5418d69b9a4ed0d370
+timeCreated: 1436880706
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 40107
+  packageName: Base Helicopter Controller
+  packageVersion: 1.1
+  assetPath: Assets/Helicopter/Race.unity
+  uploadId: 72580

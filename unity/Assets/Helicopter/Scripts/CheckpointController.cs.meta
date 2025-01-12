@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 6db521a796a2a7b4f854c3de43a8a0ba
+timeCreated: 1436872350
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 40107
+  packageName: Base Helicopter Controller
+  packageVersion: 1.1
+  assetPath: Assets/Helicopter/Scripts/CheckpointController.cs
+  uploadId: 72580

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 19c51f4ed159d704f8eef2b101b0ae2a
+timeCreated: 1434640489
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 40107
+  packageName: Base Helicopter Controller
+  packageVersion: 1.1
+  assetPath: Assets/Helicopter/Resources/Models/Terrain.asset
+  uploadId: 72580

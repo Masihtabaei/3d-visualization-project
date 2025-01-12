@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: c901165679d774b46bb79227f2dfa3fa
+timeCreated: 1556134488
+licenseType: Store
+NativeFormatImporter:
+  mainObjectFileID: 11700000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 236601
+  packageName: Enviro 3 - Sky and Weather
+  packageVersion: 3.2.0
+  assetPath: Assets/Enviro 3 - Sky and Weather/Textures/enviro_clouds_base_low.asset
+  uploadId: 721859

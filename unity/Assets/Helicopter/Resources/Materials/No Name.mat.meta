@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1752ce38455b00c408572c86665b19ed
+timeCreated: 1436891622
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 40107
+  packageName: Base Helicopter Controller
+  packageVersion: 1.1
+  assetPath: Assets/Helicopter/Resources/Materials/No Name.mat
+  uploadId: 72580

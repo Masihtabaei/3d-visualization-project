@@ -11,22 +11,18 @@ public class StartConfigurationManager : MonoBehaviour
     private TMP_Dropdown controller;
 
     [SerializeField]
-    private TMP_InputField serverAddress;
-
-    [SerializeField]
     private Slider progressBar;
 
     private int selectedSceneIndex = 1;
 
     public void SetLocation(int index) 
     { 
-        selectedSceneIndex = 1;
+        selectedSceneIndex = index;
     }
 
     public void StartSimulation() 
     {
-        Debug.Log(serverAddress.text);
-        Debug.Log(controller.value);
+        CrossSceneInformation.controllerIndex = controller.value;
         StartCoroutine(LoadSceneAsynchronously());
     }
 
