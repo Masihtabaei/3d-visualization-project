@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: 71b62ed046091cf41a402399fae85bd8
+guid: a16f9adee3be53248aa98a09ed2844b5
 PrefabImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 266414
+  packageName: Lowpoly Aircraft 2
+  packageVersion: 2023
+  assetPath: Assets/Lowpoly Aircraft 2/prefabs/Road.prefab
+  uploadId: 618987
