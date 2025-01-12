@@ -130,9 +130,9 @@ MonoBehaviour:
   preset: {fileID: 11400000, guid: 0fcdd472bd6a8ec429fc1e9bc978c4fa, type: 2}
   showCirrusCloudsControls: 0
   show2DCloudsControls: 0
-  cloudFlatBaseAnim: {x: 0.15382452, y: 0.23880045}
-  cloudFlatDetailAnim: {x: 0.5848878, y: -0.5105092}
-  cirrusAnim: {x: -0.06857044, y: 0.2596287}
+  cloudFlatBaseAnim: {x: 0.69558305, y: -0.30295748}
+  cloudFlatDetailAnim: {x: -0.715585, y: 0.78588414}
+  cirrusAnim: {x: 0.20230858, y: -0.011250314}
 --- !u!114 &-5447272849285213076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,13 +150,13 @@ MonoBehaviour:
   active: 1
   Settings:
     simulate: 1
-    secSerial: 0
-    minSerial: 18
-    hourSerial: 7
+    secSerial: 24
+    minSerial: 28
+    hourSerial: 20
     daySerial: 12
     monthSerial: 1
     yearSerial: 2025
-    timeOfDay: 7.3000007
+    timeOfDay: 20.473333
     latitude: 50.263935
     longitude: 10.983729
     utcOffset: 1
@@ -171,7 +171,7 @@ MonoBehaviour:
   preset: {fileID: 11400000, guid: 82acdd278499d74498ad37dd931734d1, type: 2}
   showTimeControls: 1
   showLocationControls: 1
-  LST: 217.4895
+  LST: 55.630554
 --- !u!114 &-1033463005042072443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -900,8 +900,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e0fff1aca044c40b9f5dc9d0bfaaa3, type: 3}
   m_Name: Audio Module
   m_EditorClassIdentifier: 
-  showModuleInspector: 0
-  showSaveLoad: 0
+  showModuleInspector: 1
+  showSaveLoad: 1
   active: 1
   Settings:
     ambientClips:
@@ -1145,10 +1145,10 @@ MonoBehaviour:
   ambientVolumeModifier: 0
   weatherVolumeModifier: 0
   thunderVolumeModifier: 0
-  showAmbientSetupControls: 0
+  showAmbientSetupControls: 1
   showWeatherSetupControls: 0
   showThunderSetupControls: 0
-  showAudioControls: 0
+  showAudioControls: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1981,7 +1981,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    temperature: 3.1852624
+    temperature: 1.5894338
     temperatureWeatherMod: 0
     temperatureCustomMod: 0
     temperatureChangingSpeed: 0.1
@@ -2062,7 +2062,7 @@ MonoBehaviour:
     defaultSkyReflectionTex: {fileID: 0}
   preset: {fileID: 11400000, guid: da668770e38694d49af97ecfd05fd7eb, type: 2}
   showReflectionControls: 0
-  lastReflectionUpdate: 7.325001
+  lastReflectionUpdate: 20.494167
   lastReflectionUpdatePos: {x: 622.6, y: 164.2, z: 370.6}
 --- !u!114 &3171557369469055653
 MonoBehaviour:
@@ -2266,7 +2266,7 @@ MonoBehaviour:
   showDensityControls: 0
   showTextureControls: 0
   showWindControls: 0
-  cloudAnimLayer1: {x: -0.39932412, y: 0.049279515, z: -0.9616521}
+  cloudAnimLayer1: {x: 0.4133128, y: -0.76335716, z: 0.87922883}
   cloudAnimLayer2: {x: -0.4792946, y: 0.4792946, z: 0.105380446}
   cloudAnimNonScaledLayer1: {x: 0.006009331, y: -0.006009331, z: -0.1001555}
   cloudAnimNonScaledLayer2: {x: -0.00200311, y: 0.00200311, z: -0.1001555}
@@ -2872,6 +2872,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   customFogDensityModifer: 1
   fogMat: {fileID: 0}
   volumetricsMat: {fileID: 0}
@@ -2890,7 +2891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 258de2724c9dfb643a546d0688715ff1, type: 3}
   m_Name: Lightning Module
   m_EditorClassIdentifier: 
-  showModuleInspector: 1
+  showModuleInspector: 0
   showSaveLoad: 0
   active: 1
   Settings:
