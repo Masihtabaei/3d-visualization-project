@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: a14d9d0f3e6133f47971e80348738636
+timeCreated: 1469620780
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 68264
+  packageName: DatePicker for UnityUI
+  packageVersion: 1.26
+  assetPath: Assets/UI/DatePicker/DatePicker_DateRange.cs
+  uploadId: 354393

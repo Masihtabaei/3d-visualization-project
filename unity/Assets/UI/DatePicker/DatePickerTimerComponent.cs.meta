@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: eacc0f717a736fe409e8e7ff365401d9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 68264
+  packageName: DatePicker for UnityUI
+  packageVersion: 1.26
+  assetPath: Assets/UI/DatePicker/DatePickerTimerComponent.cs
+  uploadId: 354393

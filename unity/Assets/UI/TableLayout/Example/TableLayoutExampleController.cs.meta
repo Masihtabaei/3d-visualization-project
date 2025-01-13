@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 8a014805545e19146962cde5987dee3e
+timeCreated: 1466597972
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 68264
+  packageName: DatePicker for UnityUI
+  packageVersion: 1.26
+  assetPath: Assets/UI/TableLayout/Example/TableLayoutExampleController.cs
+  uploadId: 354393

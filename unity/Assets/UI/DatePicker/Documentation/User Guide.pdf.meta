@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d846c11f4a903fc45b8ff5b779815440
+timeCreated: 1470062556
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 68264
+  packageName: DatePicker for UnityUI
+  packageVersion: 1.26
+  assetPath: Assets/UI/DatePicker/Documentation/User Guide.pdf
+  uploadId: 354393

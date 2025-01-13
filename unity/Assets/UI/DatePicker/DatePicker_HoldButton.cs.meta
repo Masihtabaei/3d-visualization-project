@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 988ffe1fd29e7994b8411bb07695a415
+timeCreated: 1518610168
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 68264
+  packageName: DatePicker for UnityUI
+  packageVersion: 1.26
+  assetPath: Assets/UI/DatePicker/DatePicker_HoldButton.cs
+  uploadId: 354393

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b3109c11f0d833e45911e5c790493d3d
+timeCreated: 1481877028
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 68264
+  packageName: DatePicker for UnityUI
+  packageVersion: 1.26
+  assetPath: Assets/UI/DatePicker/Example/Shared Calendar Example.unity
+  uploadId: 354393

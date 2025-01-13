@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 62429c5426a10784d9272e2b60660e57
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 68264
+  packageName: DatePicker for UnityUI
+  packageVersion: 1.26
+  assetPath: Assets/UI/DatePicker/Fonts/Arial Bold.asset
+  uploadId: 354393

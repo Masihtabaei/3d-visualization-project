@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 901680f7e0ec34947af2b72e976cc800
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 68264
+  packageName: DatePicker for UnityUI
+  packageVersion: 1.26
+  assetPath: Assets/UI/DatePicker/Resources/Prefabs/Canvas.prefab
+  uploadId: 354393

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3e29f803e4198334b90aacf11d1a41ac
+timeCreated: 1469104120
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 68264
+  packageName: DatePicker for UnityUI
+  packageVersion: 1.26
+  assetPath: Assets/UI/DatePicker/Animation/Slide_Below.anim
+  uploadId: 354393

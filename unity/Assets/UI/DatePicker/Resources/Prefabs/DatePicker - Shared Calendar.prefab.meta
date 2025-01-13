@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a3568642f57c4a14b95169d0bdbe37ec
+timeCreated: 1481985810
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 68264
+  packageName: DatePicker for UnityUI
+  packageVersion: 1.26
+  assetPath: Assets/UI/DatePicker/Resources/Prefabs/DatePicker - Shared Calendar.prefab
+  uploadId: 354393

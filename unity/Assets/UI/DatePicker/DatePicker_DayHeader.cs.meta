@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 18a923d3d6950f942b48f9378fd1df80
+timeCreated: 1467802994
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 68264
+  packageName: DatePicker for UnityUI
+  packageVersion: 1.26
+  assetPath: Assets/UI/DatePicker/DatePicker_DayHeader.cs
+  uploadId: 354393

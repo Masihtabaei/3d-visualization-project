@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7007f7b85352a5c41bc151217c657528
+timeCreated: 1469020952
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 68264
+  packageName: DatePicker for UnityUI
+  packageVersion: 1.26
+  assetPath: Assets/UI/DatePicker/Animation/DatePickerAnimationController.controller
+  uploadId: 354393

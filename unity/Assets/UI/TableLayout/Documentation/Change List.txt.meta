@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3fac32f77096d63469f658c479d08910
+timeCreated: 1466686464
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 68264
+  packageName: DatePicker for UnityUI
+  packageVersion: 1.26
+  assetPath: Assets/UI/TableLayout/Documentation/Change List.txt
+  uploadId: 354393

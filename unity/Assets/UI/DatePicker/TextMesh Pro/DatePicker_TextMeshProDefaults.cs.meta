@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2d4e26e5691100241bf55afc90b055f2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 68264
+  packageName: DatePicker for UnityUI
+  packageVersion: 1.26
+  assetPath: Assets/UI/DatePicker/TextMesh Pro/DatePicker_TextMeshProDefaults.cs
+  uploadId: 354393
