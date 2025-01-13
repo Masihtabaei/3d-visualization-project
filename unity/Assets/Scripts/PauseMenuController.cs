@@ -3,7 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenuController : MonoBehaviour
 {
-    public static bool isPaused = false;
+
+    public static bool pauseMenuOpened = false;
+
 
     [SerializeField]
     private GameObject pauseMenuUserInterface;
@@ -12,10 +14,14 @@ public class PauseMenuController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
-                Resume();
-            else
-                Pause();
+            if (!HelpMenuManager.helpMenuOpened)
+            {
+                if (pauseMenuOpened)
+                    Resume();
+                else
+                    Pause();
+            }
+
         }
     }
 
@@ -23,14 +29,14 @@ public class PauseMenuController : MonoBehaviour
     {
         pauseMenuUserInterface.SetActive(false);
         Time.timeScale = 1.0f;
-        isPaused = false;
+        pauseMenuOpened = false;
     }
 
     public void Pause()
     {
         pauseMenuUserInterface.SetActive(true);
         Time.timeScale = 0.0f;
-        isPaused = true;
+        pauseMenuOpened = true;
     }
 
 

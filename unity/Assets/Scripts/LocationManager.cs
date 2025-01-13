@@ -12,7 +12,6 @@ public class LocationManager : MonoBehaviour
 {
     private WebSocket websocket;
 
-
     [SerializeField]
     private TextMeshProUGUI connectionStatusField;
 
