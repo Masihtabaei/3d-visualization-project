@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ConfigurationMenuManager : MonoBehaviour
 {
@@ -11,13 +12,20 @@ public class ConfigurationMenuManager : MonoBehaviour
     private GameObject headUpDisplayUserInterface;
 
     [SerializeField]
-    private UISwitcher.UISwitcher syncToggle;
-
-    [SerializeField]
     private TMPro.TMP_Dropdown scenarios;
 
     [SerializeField]
+    private Toggle solarPanelToggle;
+
+    [SerializeField]
+    private Toggle sceneSyncToggle;
+
+    [SerializeField]
+    private GameObject solarPanelGroups;
+
+    [SerializeField]
     private LocationManager locationManager;
+
 
     void Update()
     {
@@ -59,18 +67,31 @@ public class ConfigurationMenuManager : MonoBehaviour
         }
     }
 
+    public void HandleSolarPanelToggle()
+    {
+        if (solarPanelToggle.isOn)
+            solarPanelGroups.SetActive(true);
+        else
+            solarPanelGroups.SetActive(false);
+    }
+
+    public void HandleSyncToggle()
+    { 
+        if(sceneSyncToggle.isOn)
+            EnableSync();
+        else
+            DisableSync();
+    }
     private void DisableSync() 
     {
-        syncToggle.isOn = false;
         locationManager.StopSyncing();
-        syncToggle.interactable = true;
+        sceneSyncToggle.isOn = false;
     }
 
     public void EnableSync()
     {
-        syncToggle.isOn = true;
         locationManager.StartSyncing();
-        syncToggle.interactable = false;
+        sceneSyncToggle.isOn = true;
     }
 
 }

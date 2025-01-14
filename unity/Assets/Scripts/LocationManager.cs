@@ -150,6 +150,7 @@ public class LocationManager : MonoBehaviour
     IEnumerator UpdateEnvironment()
     {
         yield return new WaitForSeconds(15f);
+        
         if (currentWeatherData?.rain == 0 && currentWeatherData?.snowfall == 0)
         {
             Enviro.EnviroManager.instance.Weather.ChangeWeather("Clear Sky");

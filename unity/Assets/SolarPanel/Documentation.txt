@@ -1,0 +1,6 @@
+
+This Asset contains a high-quality solar panel 3d model, useful for games, renders, and even engineering simulations. The texture resolutions are: 2048x2048 for the solar panel material and 1024x1024 for the metallic materials.
+
+To properly import this package into a new Unity project you must install the PostProcessing package, from the Package Manager. If you only want to use the 3d model, just drag the game ready prefab into your scene and it will work.
+
+The 3d model has 2k polygons.

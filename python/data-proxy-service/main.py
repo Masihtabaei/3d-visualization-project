@@ -44,6 +44,31 @@ def retrieve_current_weather_data(latitude, longitude):
     print(retrieval_result)
     return retrieval_result
 
+def retrieve_historical_weather_data(latitude, longitude, year, month, day, hour):
+    cache_session = requests_cache.CachedSession('.cache', expire_after=3600)
+    retry_session = retry(cache_session, retries=5, backoff_factor=0.2)
+    openmeteo_handle = openmeteo_requests.Client(session=retry_session)
+    url = "https://api.open-meteo.com/v1/forecast"
+    params = {
+	    "latitude": latitude,
+	    "longitude": longitude,
+	    "current": ["temperature_2m", "apparent_temperature", "rain", "snowfall", "is_day"]
+    }
+    responses = openmeteo_handle.weather_api(url, params=params)
+    response = responses[0]
+
+    retrieval_result = {
+        "latitude": response.Latitude(),
+        "longitude": response.Longitude(),
+        "temperature": response.Current().Variables(0).Value(),
+        "apparent_temperature": response.Current().Variables(1).Value(),
+        "rain": response.Current().Variables(2).Value(),
+        "snowfall": response.Current().Variables(3).Value(),
+        "is_day": response.Current().Variables(4).Value()
+    }
+    print(retrieval_result)
+    return retrieval_result
+
 @app.get("/")
 def get_root():
     return retrieve_service_information()
@@ -52,19 +77,25 @@ def get_root():
 def get_ping():
     return "I am a banana!"
 
-@app.get("/current-weather-coburg-university")
+@app.get("/weather/current/coburg-university")
 def get_current_weather_marktplatz_coburg():
     return retrieve_current_weather_data(50.264805843873596, 10.95194081317186)
 
-@app.get("/current-weather-marketplace-coburg")
+@app.get("/weather/historical/coburg-university")
+def get_historical_weather_marktplatz_coburg(year: int, month: int, day: int, hour: int):
+    return retrieve_current_weather_data(50.264805843873596, 10.95194081317186)
+
+@app.get("/weather/current/marketplace-coburg")
 def get_current_weather_veste_coburg():
     return retrieve_current_weather_data(50.258344418260336, 10.964638398120213)
 
-@app.get("/current-weather-veste-coburg")
+@app.get("/weather/current/veste-coburg")
 def get_current_weather_marktplatz_coburg():
     return retrieve_current_weather_data(50.26393447177281, 10.98372942394643)
 
-@app.websocket("/ws/current-weather-coburg-university")
+@app.
+
+@app.websocket("/ws/weather/current/coburg-university")
 async def weather_websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     try:
@@ -78,7 +109,7 @@ async def weather_websocket_endpoint(websocket: WebSocket):
         await websocket.close()
 
 
-@app.websocket("/ws/current-weather-marketplace-coburg")
+@app.websocket("/ws/weather/current/marketplace-coburg")
 async def weather_websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     try:
@@ -91,7 +122,7 @@ async def weather_websocket_endpoint(websocket: WebSocket):
     finally:
         await websocket.close()
 
-@app.websocket("/ws/current-weather-veste-coburg")
+@app.websocket("/ws/weather/current/weather-veste-coburg")
 async def weather_websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     try:

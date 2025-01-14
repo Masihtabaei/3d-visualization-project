@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9c16424f24ad73343a15a768a464f6bc
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 175231
+  packageName: High Quality Solar Panel
+  packageVersion: 1.0
+  assetPath: Assets/SolarPanel/Documentation.txt
+  uploadId: 448829

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2045162a52bc26f40bfe1184cc93c2b0
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 175231
+  packageName: High Quality Solar Panel
+  packageVersion: 1.0
+  assetPath: Assets/SolarPanel/Assets/Materials/Skybox.mat
+  uploadId: 448829

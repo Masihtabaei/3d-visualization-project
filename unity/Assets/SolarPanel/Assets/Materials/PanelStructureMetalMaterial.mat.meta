@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e44062e0fb6abbf4f85659922a8c24cc
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 175231
+  packageName: High Quality Solar Panel
+  packageVersion: 1.0
+  assetPath: Assets/SolarPanel/Assets/Materials/PanelStructureMetalMaterial.mat
+  uploadId: 448829

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3f224e0adb4c2094ea7380ad5a08d8a8
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 175231
+  packageName: High Quality Solar Panel
+  packageVersion: 1.0
+  assetPath: Assets/SolarPanel/Assets/GameReadyPrefab/SolarPanel.prefab
+  uploadId: 448829

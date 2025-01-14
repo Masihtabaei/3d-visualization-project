@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7e58f35551e7abd4a998467ed24d0fe3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 175231
+  packageName: High Quality Solar Panel
+  packageVersion: 1.0
+  assetPath: Assets/SolarPanel/Assets/Scenes/SampleSceneSettings.lighting
+  uploadId: 448829
