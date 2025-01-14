@@ -195,15 +195,14 @@ public class LocationManager : MonoBehaviour
         Enviro.EnviroManager.instance.Weather.ChangeWeather("Cloudy 1");
     }
 
-    private void StartSyncing() 
+    public void StartSyncing() 
     {
-        Enviro.EnviroManager.instance.Time.active = true;
-        isSynced = false;
+        Enviro.EnviroManager.instance.Time.Settings.simulate = true;
+        isSynced = true;
     }
-    private void StopSyncing()
+    public void StopSyncing()
     {
-        Enviro.EnviroManager.instance.Time.active = false;
+        Enviro.EnviroManager.instance.Time.Settings.simulate = false;
         isSynced = false;
-
     }
 }

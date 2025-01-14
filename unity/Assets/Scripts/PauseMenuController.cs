@@ -10,6 +10,10 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField]
     private GameObject pauseMenuUserInterface;
 
+    [SerializeField]
+    private GameObject headUpDisplayUserInterface;
+
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -28,6 +32,7 @@ public class PauseMenuController : MonoBehaviour
     public void Resume()
     {
         pauseMenuUserInterface.SetActive(false);
+        headUpDisplayUserInterface.SetActive(true);
         Time.timeScale = 1.0f;
         pauseMenuOpened = false;
     }
@@ -35,12 +40,13 @@ public class PauseMenuController : MonoBehaviour
     public void Pause()
     {
         pauseMenuUserInterface.SetActive(true);
+        headUpDisplayUserInterface.SetActive(false);
         Time.timeScale = 0.0f;
         pauseMenuOpened = true;
     }
 
 
-    public void LoadStartMen()
+    public void LoadStartMenu()
     {
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(0);

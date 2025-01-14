@@ -1,7 +1,4 @@
 using UnityEngine;
-#if UNITY_EDITOR
-using UnityEditor; // Nur für den Editor verfügbar
-#endif
 
 public class DroneCameraController:MonoBehaviour {
     public float movementSpeed = 10.0f;
@@ -21,12 +18,6 @@ public class DroneCameraController:MonoBehaviour {
     void Update() {
         MoveCamera();
         RotateCameraWithMouse();
-
-#if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            EditorApplication.isPlaying = false;
-        }
-#endif
     }
 
     void MoveCamera() {
