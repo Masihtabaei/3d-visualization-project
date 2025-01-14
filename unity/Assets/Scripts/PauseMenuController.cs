@@ -18,7 +18,7 @@ public class PauseMenuController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!ConfigurationMenuManager.configurationMenuOpened)
+            if (!ConfigurationMenuManager.configurationMenuOpened && !HelpMenuManager.helpMenuOpened)
             {
                 if (pauseMenuOpened)
                     Resume();

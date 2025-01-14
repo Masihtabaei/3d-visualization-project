@@ -46,7 +46,7 @@ public class ConfigurationMenuManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            if(!PauseMenuController.pauseMenuOpened)
+            if(!PauseMenuController.pauseMenuOpened && !HelpMenuManager.helpMenuOpened)
             {
                 if (!historicalDataSection.activeInHierarchy)
                 {
