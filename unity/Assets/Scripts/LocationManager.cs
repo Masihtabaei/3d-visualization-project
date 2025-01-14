@@ -1,13 +1,10 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 using NativeWebSocket;
 using TMPro;
-using JetBrains.Annotations;
 using UnityEngine.Networking;
-using UnityEditor.VersionControl;
 
 
 public class LocationManager : MonoBehaviour
