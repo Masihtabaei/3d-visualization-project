@@ -57,7 +57,7 @@ public class LocationManager : MonoBehaviour
         SyncDateAndTime();
 
         Enviro.EnviroManager.instance.ChangeCamera(Camera.allCameras[0]);
-        websocket = new WebSocket("ws://localhost:8000/ws/current-weather-veste-coburg");
+        websocket = new WebSocket("ws://localhost:8000/ws/weather/current/veste-coburg");
 
         websocket.OnOpen += () =>
         {
@@ -77,7 +77,8 @@ public class LocationManager : MonoBehaviour
         websocket.OnMessage += (bytes) =>
         {
             String message = System.Text.Encoding.UTF8.GetString(bytes);
-            currentWeatherData = JsonUtility.FromJson<WeatherData>(message);
+            if (isSynced)
+                currentWeatherData = JsonUtility.FromJson<WeatherData>(message);
 
         };
 
@@ -89,7 +90,7 @@ public class LocationManager : MonoBehaviour
         UpdateTimeAndDateUI();
         UpdateWeatherDataUI();
         if(isSynced)
-            StartCoroutine(UpdateEnvironment());
+            UpdateEnvironment();
 
         #if !UNITY_WEBGL || UNITY_EDITOR
             websocket.DispatchMessageQueue();
@@ -152,10 +153,8 @@ public class LocationManager : MonoBehaviour
         snowIntensityField.text = "Snow Intensity (in mm): " + currentWeatherData?.snowfall;
     }
 
-    IEnumerator UpdateEnvironment()
+    public void UpdateEnvironment()
     {
-        yield return new WaitForSeconds(15f);
-        
         if (currentWeatherData?.rain == 0 && currentWeatherData?.snowfall == 0)
         {
             Enviro.EnviroManager.instance.Weather.ChangeWeather("Clear Sky");
@@ -164,13 +163,11 @@ public class LocationManager : MonoBehaviour
         {
             Enviro.EnviroManager.instance.Weather.ChangeWeather("Rain");
         }
-        else
+        else if (currentWeatherData?.snowfall > currentWeatherData?.rain)
         {
             Enviro.EnviroManager.instance.Weather.ChangeWeather("Snow");
         }
-
     }
-
     public void PlaySnowyWeatherScenario()
     {
         StopSyncing();
@@ -237,7 +234,6 @@ public class LocationManager : MonoBehaviour
         }
 
         StartCoroutine(GetRequest(url));
-        StartCoroutine(UpdateEnvironment());
     }
     IEnumerator GetRequest(string uri)
     {
@@ -253,6 +249,8 @@ public class LocationManager : MonoBehaviour
             String resultAsString = uwr.downloadHandler.text;
             historicalDataFetchResult.text = "Successfully Fetched!";
             currentWeatherData = JsonUtility.FromJson<WeatherData>(resultAsString);
+            StopSyncing();
+            UpdateEnvironment();
         }
     }
 }

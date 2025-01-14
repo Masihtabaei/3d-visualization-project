@@ -115,6 +115,7 @@ public class ConfigurationMenuManager : MonoBehaviour
 
     public void LoadHistoricalData()
     {
+        DisableSync();
         locationManager.LoadHistoricalData(
             int.Parse(yearInputField.text),
             int.Parse(monthInputField.text),
