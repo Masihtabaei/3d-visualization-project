@@ -35,7 +35,7 @@ public class DroneCameraController:MonoBehaviour {
         Vector3 right = new Vector3(transform.right.x, 0, transform.right.z).normalized;
         Vector3 movement = forward * moveForward + right * moveSideways + Vector3.up * moveUpDown;
 
-        transform.Translate(movement,Space.World);
+        transform.Translate(movement, Space.World);
     }
 
     void RotateCameraWithMouse() {
