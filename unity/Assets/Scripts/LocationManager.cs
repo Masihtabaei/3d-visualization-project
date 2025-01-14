@@ -224,6 +224,7 @@ public class LocationManager : MonoBehaviour
     {
         Enviro.EnviroManager.instance.Time.Settings.simulate = true;
         isSynced = true;
+        SyncDateAndTime();
     }
     public void StopSyncing()
     {
