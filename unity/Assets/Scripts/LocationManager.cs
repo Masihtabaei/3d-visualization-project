@@ -83,7 +83,8 @@ public class LocationManager : MonoBehaviour
     {
         UpdateTimeAndDateUI();
         UpdateWeatherDataUI();
-        StartCoroutine(UpdateEnvironment());
+        if(isSynced)
+            StartCoroutine(UpdateEnvironment());
 
         #if !UNITY_WEBGL || UNITY_EDITOR
             websocket.DispatchMessageQueue();
@@ -152,48 +153,57 @@ public class LocationManager : MonoBehaviour
         if (currentWeatherData?.rain == 0 && currentWeatherData?.snowfall == 0)
         {
             Enviro.EnviroManager.instance.Weather.ChangeWeather("Clear Sky");
-            Debug.Log("Clear Sky");
         }
         else if (currentWeatherData?.rain >= currentWeatherData?.snowfall)
         {
             Enviro.EnviroManager.instance.Weather.ChangeWeather("Rain");
-            Debug.Log("Rain");
         }
         else
         {
             Enviro.EnviroManager.instance.Weather.ChangeWeather("Snow");
-            Debug.Log("Snow");
         }
 
     }
 
     public void PlaySnowyWeatherScenario()
     {
+        StopSyncing();
         Enviro.EnviroManager.instance.Weather.ChangeWeather("Snow");
-        isSynced = false;
     }
 
     public void PlayRainyWeatherScenatio()
     {
+        StopSyncing();
         Enviro.EnviroManager.instance.Weather.ChangeWeather("Rain");
-        isSynced = false;
     }
 
     public void PlayFoggyWeatherScenario()
     {
+        StopSyncing();
         Enviro.EnviroManager.instance.Weather.ChangeWeather("Foggy");
-        isSynced = false;
     }
 
     public void PlayClearWeatherScenario()
     {
+        StopSyncing();
         Enviro.EnviroManager.instance.Weather.ChangeWeather("Clear Sky");
-        isSynced = false;
     }
 
     public void PlayCloudyWeatherScenario()
     {
+        StopSyncing();
         Enviro.EnviroManager.instance.Weather.ChangeWeather("Cloudy 1");
+    }
+
+    private void StartSyncing() 
+    {
+        Enviro.EnviroManager.instance.Time.active = true;
         isSynced = false;
+    }
+    private void StopSyncing()
+    {
+        Enviro.EnviroManager.instance.Time.active = false;
+        isSynced = false;
+
     }
 }

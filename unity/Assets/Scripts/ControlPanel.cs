@@ -21,8 +21,6 @@ public class ControlPanel : MonoBehaviour {
     KeyCode TurnLeft = KeyCode.Q;
     [SerializeField]
     KeyCode TurnRight = KeyCode.E;
-    [SerializeField]
-    KeyCode MusicOffOn = KeyCode.M;
     
     private KeyCode[] keyCodes;
 
@@ -59,16 +57,6 @@ public class ControlPanel : MonoBehaviour {
 	    if (KeyPressed != null)
 	        KeyPressed(pressedKeyCode.ToArray());
 
-        // for test
-        if (Input.GetKey(MusicOffOn))
-        {
-           if (  MusicSound.volume == 1) return;
-/*            if (MusicSound.isPlaying)
-                MusicSound.Stop();
-            else*/
-                MusicSound.volume = 1;
-                MusicSound.Play();
-        }
       
 	}
 }
