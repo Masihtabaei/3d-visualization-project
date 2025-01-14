@@ -87,13 +87,16 @@ public class LocationManager : MonoBehaviour
 
     void Update()
     {
-        UpdateTimeAndDateUI();
-        UpdateWeatherDataUI();
-        if(isSynced)
+        if (isSynced)
+        {
+            UpdateWeatherDataUI();
+            UpdateTimeAndDateUI();
             UpdateEnvironment();
 
-        #if !UNITY_WEBGL || UNITY_EDITOR
-            websocket.DispatchMessageQueue();
+        }
+
+#if !UNITY_WEBGL || UNITY_EDITOR
+        websocket.DispatchMessageQueue();
         #endif
     }
 
@@ -143,6 +146,13 @@ public class LocationManager : MonoBehaviour
         syncStatusField.text = "Synced: " + (isSynced ? "Yes" : "No");
         dateField.text = "Date: " + currentDate;
         timeField.text = "Time: " + currentTime;
+    }
+
+    public void UpdateTimeAndDateUI(int year, int month, int day, int hour)
+    {
+        syncStatusField.text = "Synced: " + (isSynced ? "Yes" : "No");
+        dateField.text = "Date: " + year + "." + month + "." + day;
+        timeField.text = "Time: " + hour + ":" + "00:00";
     }
 
     private void UpdateWeatherDataUI()
@@ -207,6 +217,7 @@ public class LocationManager : MonoBehaviour
     {
         Enviro.EnviroManager.instance.Time.Settings.simulate = false;
         isSynced = false;
+        UpdateTimeAndDateUI();
     }
 
     public void LoadHistoricalData(int year, int month, int day, int hour)
@@ -233,6 +244,8 @@ public class LocationManager : MonoBehaviour
             return;
         }
 
+        historicalDataFetchResult.text = "";
+        UpdateTimeAndDateUI(year, month, day, hour);
         StartCoroutine(GetRequest(url));
     }
     IEnumerator GetRequest(string uri)
@@ -251,6 +264,7 @@ public class LocationManager : MonoBehaviour
             currentWeatherData = JsonUtility.FromJson<WeatherData>(resultAsString);
             StopSyncing();
             UpdateEnvironment();
+            UpdateWeatherDataUI();
         }
     }
 }
