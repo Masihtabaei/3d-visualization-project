@@ -6,6 +6,8 @@ using UnityEngine;
 using NativeWebSocket;
 using TMPro;
 using JetBrains.Annotations;
+using UnityEngine.Networking;
+using UnityEditor.VersionControl;
 
 
 public class LocationManager : MonoBehaviour
@@ -39,6 +41,9 @@ public class LocationManager : MonoBehaviour
 
     [SerializeField]
     private GameObject[] controllers;
+
+    [SerializeField]
+    private TextMeshProUGUI historicalDataFetchResult;
 
     private GameObject controller;
 
@@ -205,5 +210,49 @@ public class LocationManager : MonoBehaviour
     {
         Enviro.EnviroManager.instance.Time.Settings.simulate = false;
         isSynced = false;
+    }
+
+    public void LoadHistoricalData(int year, int month, int day, int hour)
+    {
+        string url = $"http://localhost:8000/weather/historical/veste-coburg?year={year}&month={month:D2}&day={day:D2}&hour={hour:D2}";
+        if (year < 2000 || year > 2024)
+        {
+            historicalDataFetchResult.text = "Invalid Year!";
+            return;
+        }
+        if (month < 1 || month > 12)
+        {
+            historicalDataFetchResult.text = "Invalid Month!";
+            return;
+        }
+        if (day < 1 || day > 31)
+        {
+            historicalDataFetchResult.text = "Invalid Day!";
+            return;
+        }
+        if (hour < 0 || hour > 23)
+        {
+            historicalDataFetchResult.text = "Invalid Hour!";
+            return;
+        }
+
+        StartCoroutine(GetRequest(url));
+        StartCoroutine(UpdateEnvironment());
+    }
+    IEnumerator GetRequest(string uri)
+    {
+        UnityWebRequest uwr = UnityWebRequest.Get(uri);
+        yield return uwr.SendWebRequest();
+
+        if (uwr.result == UnityWebRequest.Result.ConnectionError)
+        {
+            historicalDataFetchResult.text = "Error: " + uwr.error;
+        }
+        else
+        {
+            String resultAsString = uwr.downloadHandler.text;
+            historicalDataFetchResult.text = "Successfully Fetched!";
+            currentWeatherData = JsonUtility.FromJson<WeatherData>(resultAsString);
+        }
     }
 }

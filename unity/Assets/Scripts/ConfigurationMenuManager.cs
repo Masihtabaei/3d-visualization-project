@@ -27,6 +27,18 @@ public class ConfigurationMenuManager : MonoBehaviour
     private GameObject historicalDataSection;
 
     [SerializeField]
+    private TMPro.TMP_InputField yearInputField;
+
+    [SerializeField]
+    private TMPro.TMP_InputField monthInputField;
+
+    [SerializeField]
+    private TMPro.TMP_InputField dayInputField;
+
+    [SerializeField]
+    private TMPro.TMP_InputField hourInputField;
+
+    [SerializeField]
     private LocationManager locationManager;
 
 
@@ -99,6 +111,16 @@ public class ConfigurationMenuManager : MonoBehaviour
     {
         locationManager.StartSyncing();
         sceneSyncToggle.isOn = true;
+    }
+
+    public void LoadHistoricalData()
+    {
+        locationManager.LoadHistoricalData(
+            int.Parse(yearInputField.text),
+            int.Parse(monthInputField.text),
+            int.Parse(dayInputField.text),
+            int.Parse(hourInputField.text)
+        );
     }
 
 }
