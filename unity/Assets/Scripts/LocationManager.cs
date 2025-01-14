@@ -137,6 +137,16 @@ public class LocationManager : MonoBehaviour
         isSynced = true;
     }
 
+    private void UpdateDateAndTime(int year, int month, int day, int hour)
+    {
+        Enviro.EnviroManager.instance.Time.seconds = 0;
+        Enviro.EnviroManager.instance.Time.minutes = 0;
+        Enviro.EnviroManager.instance.Time.hours = hour;
+        Enviro.EnviroManager.instance.Time.days = day;
+        Enviro.EnviroManager.instance.Time.months = month;
+        Enviro.EnviroManager.instance.Time.years = year;
+    }
+
     private void UpdateTimeAndDateUI()
     {
         string currentDate = 
@@ -268,6 +278,7 @@ public class LocationManager : MonoBehaviour
             currentWeatherData = JsonUtility.FromJson<WeatherData>(resultAsString);
             StopSyncing();
             UpdateEnvironment();
+            UpdateDateAndTime(year, month, day, hour);
             UpdateTimeAndDateUI(year, month, day, hour);
             UpdateWeatherDataUI();
         }
