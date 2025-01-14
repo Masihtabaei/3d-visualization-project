@@ -29,7 +29,6 @@ public class LocationManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI snowIntensityField;
 
-
     [SerializeField]
     private TextMeshProUGUI syncStatusField;
 
@@ -45,6 +44,12 @@ public class LocationManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI historicalDataFetchResult;
 
+    [SerializeField]
+    private String websocketAddress;
+
+    [SerializeField]
+    private String restServerAddress;
+
     private GameObject controller;
 
     private bool isSynced;
@@ -57,7 +62,7 @@ public class LocationManager : MonoBehaviour
         SyncDateAndTime();
 
         Enviro.EnviroManager.instance.ChangeCamera(Camera.allCameras[0]);
-        websocket = new WebSocket("ws://localhost:8000/ws/weather/current/veste-coburg");
+        websocket = new WebSocket(websocketAddress);
 
         websocket.OnOpen += () =>
         {
@@ -222,7 +227,7 @@ public class LocationManager : MonoBehaviour
 
     public void LoadHistoricalData(int year, int month, int day, int hour)
     {
-        string url = $"http://localhost:8000/weather/historical/veste-coburg?year={year}&month={month:D2}&day={day:D2}&hour={hour:D2}";
+        string url = $"{restServerAddress}?year={year}&month={month:D2}&day={day:D2}&hour={hour:D2}";
         if (year < 2000 || year > 2024)
         {
             historicalDataFetchResult.text = "Invalid Year!";
@@ -245,10 +250,9 @@ public class LocationManager : MonoBehaviour
         }
 
         historicalDataFetchResult.text = "";
-        UpdateTimeAndDateUI(year, month, day, hour);
-        StartCoroutine(GetRequest(url));
+        StartCoroutine(GetRequest(url, year, month, day, hour));
     }
-    IEnumerator GetRequest(string uri)
+    IEnumerator GetRequest(string uri, int year, int month, int day, int hour)
     {
         UnityWebRequest uwr = UnityWebRequest.Get(uri);
         yield return uwr.SendWebRequest();
@@ -264,6 +268,7 @@ public class LocationManager : MonoBehaviour
             currentWeatherData = JsonUtility.FromJson<WeatherData>(resultAsString);
             StopSyncing();
             UpdateEnvironment();
+            UpdateTimeAndDateUI(year, month, day, hour);
             UpdateWeatherDataUI();
         }
     }
