@@ -143,7 +143,7 @@ async def weather_websocket_endpoint(websocket: WebSocket):
     finally:
         await websocket.close()
 
-@app.websocket("/ws/weather/current/weather-veste-coburg")
+@app.websocket("/ws/weather/current/veste-coburg")
 async def weather_websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     try:

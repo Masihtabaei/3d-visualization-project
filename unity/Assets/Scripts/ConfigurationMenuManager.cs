@@ -24,6 +24,9 @@ public class ConfigurationMenuManager : MonoBehaviour
     private GameObject solarPanelGroups;
 
     [SerializeField]
+    private GameObject historicalDataSection;
+
+    [SerializeField]
     private LocationManager locationManager;
 
 
@@ -33,10 +36,14 @@ public class ConfigurationMenuManager : MonoBehaviour
         {
             if(!PauseMenuController.pauseMenuOpened)
             {
-                if (configurationMenuOpened)
-                    Resume();
-                else
-                    Pause();
+                if (!historicalDataSection.activeInHierarchy)
+                {
+                    if (configurationMenuOpened)
+                        Resume();
+                    else
+                        Pause();
+                }
+
             }
 
         }
