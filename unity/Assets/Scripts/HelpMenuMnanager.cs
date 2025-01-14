@@ -33,6 +33,8 @@ public class HelpMenuManager : MonoBehaviour
         helpMenuOpened = false;
         helpMenuUserInterface.SetActive(false);
         headUpDisplayUserInterface.SetActive(true);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void Pause()
@@ -41,5 +43,7 @@ public class HelpMenuManager : MonoBehaviour
         headUpDisplayUserInterface.SetActive(false);
         Time.timeScale = 0.0f;
         helpMenuOpened = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

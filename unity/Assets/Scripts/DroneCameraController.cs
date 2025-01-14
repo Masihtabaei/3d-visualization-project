@@ -16,8 +16,11 @@ public class DroneCameraController:MonoBehaviour {
     }
 
     void Update() {
-        MoveCamera();
-        RotateCameraWithMouse();
+        if (!PauseMenuController.pauseMenuOpened && !ConfigurationMenuManager.configurationMenuOpened && !HelpMenuManager.helpMenuOpened) {
+            MoveCamera();
+            RotateCameraWithMouse();
+        }
+
     }
 
     void MoveCamera() {

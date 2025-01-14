@@ -35,6 +35,9 @@ public class PauseMenuController : MonoBehaviour
         headUpDisplayUserInterface.SetActive(true);
         Time.timeScale = 1.0f;
         pauseMenuOpened = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
     }
 
     public void Pause()
@@ -43,6 +46,8 @@ public class PauseMenuController : MonoBehaviour
         headUpDisplayUserInterface.SetActive(false);
         Time.timeScale = 0.0f;
         pauseMenuOpened = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
 

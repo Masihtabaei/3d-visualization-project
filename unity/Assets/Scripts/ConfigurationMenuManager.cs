@@ -67,6 +67,8 @@ public class ConfigurationMenuManager : MonoBehaviour
         configurationMenuOpened = false;
         configurationMenuUserInterface.SetActive(false);
         headUpDisplayUserInterface.SetActive(true);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void Pause()
@@ -75,6 +77,8 @@ public class ConfigurationMenuManager : MonoBehaviour
         headUpDisplayUserInterface.SetActive(false);
         Time.timeScale = 0.0f;
         configurationMenuOpened = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void LoadScenario() {
